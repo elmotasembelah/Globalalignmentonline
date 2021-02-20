@@ -25,7 +25,7 @@ SECRET_KEY = 'eehmn6&h!@cerrpfqml*b$fy27v5-p+2$lfkyhxj%iy4mym%mx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['globalsequencealingment.herokuapp.com']
+ALLOWED_HOSTS = ['globalsequencealingment.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
