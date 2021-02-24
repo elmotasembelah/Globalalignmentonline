@@ -6,19 +6,26 @@
 {% block content %}
 
 <body class="text-center">
+    <form class="form-signin" method="POST">
+        {% csrf_token %}
 
-        <form class="form-signin" method="POST" style=" background-color: rgb(255, 255, 255); margin-top: 200px; padding: 50px; border-radius: 10px;">
-            {% csrf_token %}
-            <h1 class="h3 mb-3 font-weight-normal" >
-                Please Enter your sequences
-            </h1>
-            
-            <input type="text" id="seq1" class="form-control" placeholder="First sequence" name="seq1" required autofocus>
-            <br>
-            
-            <input type="text" id="seq2" class="form-control" placeholder="Second sequence" name="seq2" required autofocus>
-            <br>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Use algorithm</button>
-        </form>
+        <h1 class="h3 mb-3 font-weight-normal">
+            Please Enter your sequences
+        </h1>
+
+        <label for="seq1" class="sr-only">
+            seq1
+        </label>
+        <input type="text" id="seq1" class="form-control" placeholder="First sequence" name="seq1" required autofocus>
+        <br>
+
+        <label for="seq2" class="sr-only">
+            seq2
+        </label>
+        <input type="text" id="seq2" class="form-control" placeholder="Second sequence" name="seq2" required autofocus>
+        <br>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Use algorithm</button>
+    </form>
 </body>
 {% endblock %}
